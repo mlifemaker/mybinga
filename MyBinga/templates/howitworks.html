@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+	<h3>Comment ça marche</h3>
+	<p>
+	MyBinga offrira un service de transfert inter-monétaire à travers une plateforme web classique, sur laquelle des utilisateurs peuvent créer des profils et des paiements par la suite. Enregistrer un profil requiert les données personnelles, ensuite l’utilisateur pourra créer des paiements.  
+Après la création d’un profil d’utilisateur, le processus de transfert d’argent est simple et transparent :</p>
+<ol>
+   
+	<li>	Charger l’argent vers le profil utilisateur</li>
+	<ul>
+		<li>L’utilisateur peut charger de l’argent dans la monnaie locale avec n’importe quel moyen de paiement (banque en ligne, carte de crédit, mobile, transfert bancaire classique...)</li> 
+		<li>L’argent est reçu sur le compte MyBinga de l’utilisateur</li>  
+		<li>Un mail de confirmation est envoyé à l’utilisateur</li>
+		<li>L’argent est sauvegardé dans une poche virtuelle</li>
+	</ul>
+	<li>Transaction:</li>
+	<ul>
+		<li>Le mandataire détermine</li>
+		<li>La période de transfert (date ultime)</li>
+		<li>Les détails bancaires du bénéficiaire</li>  
+		<li>Le montant à transférer et prélever de la poche virtuelle MyBinga de l’utilisateur</li>
+		<li>Le transfert est effectué au taux de marché moyen en couplant les flux dans les directions opposées, si le couplement n’est pas possible, le mandataire peut choisir entre récupérer sans argent ou transférer les fonds en payant une commission supplémentaire (MyBinga prendra alors position sur le marché Forex)</li>
+
+	</ul>
+
+	<li>Confirmation du paiement</li>
+	<ul>
+		<li>Après avoir récupéré se commision, MyBinga transfert l’argent sur le compte du bénéficiaire avec le taux moyen de la date de l’opération</li>
+		<li>Le paiement est confirmé aux deux parties prenantes</li>	
+	</ul>
+</ol>
+<div style="text-align:center;">
+	<img src="{{ STATIC_URL }}images/howitworks.png" />
+</div>
+
+<!--div id="schema">
+<table>
+<tr>
+<th>Charger l’argent vers le profil utilisateur</th>
+<th>Transaction</th>
+<th>Confirmation du paiement</th>
+</tr>
+<tr>
+<td>L’utilisateur peut charger de l’argent dans la monnaie locale avec n’importe quel moyen de paiement (banque en ligne, carte de crédit, mobile, transfert bancaire classique...)</td>
+<td>Griffin</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>L’argent est reçu sur le compte MyBinga de l’utilisateur</td>
+<td>Griffin</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Un mail de confirmation est envoyé à l’utilisateur</td>
+<td>Swanson</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Cleveland</td>
+<td>Brown</td>
+<td>$250</td>
+</tr>
+</table>
+</div-->
+{% endblock content %}
+

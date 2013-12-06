@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+                        <div class="" style="height: 340px; width: 500px;margin-left: 40px; margin-right: 40px;">
+
+                                        <h3 class="b">Transférer votre argent entre le Maroc et l'Europe au moindre coût sans passer par une banque..</h3>
+
+                                        <p class="top20 block-desktop block-tablet">
+                                                MyBinga, est un service en ligne de transfert de monnaies pair-à-pair.</br>
+                                                Nous avons comme objectif de permettre le transfert de monnaies entre le Maroc et différents pays Européens par couplage de transferts de particuliers à travers un réseau de change en ligne.
+                                        </p>
+</div>
+<div style="width:500px; float:right; display: inline-block;margin-top: -300px; margin-right: 65px;">
+        <img src="{{ STATIC_URL }}images/P2PExchange.png" />
+</div>
+
+<!--div id="tranfer" style="border:solid 2px red; text-align:center;">
+                                <h3> Je veux transférer</h3>
+
+
+<form action="#transfered" method="post">{% csrf_token %}
+{{ form }}
+<br>
+<input type="submit" value="Mon destinataire reçoit :">
+
+</form>
+<br>
+{% if envoi %}
+
+<input  id="transfered" class="input-medium" value="{{ReceivedAmount}} {{To}}">
+<p>Frais: {{fee}} {{From}}</p>
+{% else %}
+<input  class="input-medium" value="">
+
+{% endif %}
+ </div-->
+<link href="http://www.worldwide-fxc.com/api/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.worldwide-fxc.com/api/index.js"></script>
+<script type="text/javascript">
+
+var textAmount	= "J'envoie:";
+var textFrom	= "de:";
+var textTo	 = "au:";
+var textConvert	= "Mon destinataire reçoit";
+var currencies='<option value="MAD" >Dirham</option><option value="EUR" >Euro</option>'
+
+var cAM;
+			var cFR;
+			var cTO;
+
+			function convertthis()
+			{
+
+				cAM	= document.getElementById('convertam').value;
+				cFR	= document.getElementById('convertfr').value;
+				cTO	= document.getElementById('convertto').value;
+				document.getElementById('convertre').innerHTML 	=	Math.round(((xrates[cTO] / xrates[cFR]) * cAM) * 99) / 100
++'&nbsp;'+cTO;
+			}
+
+			function exchangeTableau()
+			{
+				return '<table class="conversiontable" cellspacing="2" cellpadding="0" border="0"><tr><td style="padding: 10px"><a>Transférer MyBinga</a></td><td align="center" valign="middle"></td></tr><tr><td class="conversiontdleft">'+textAmount+'</td><td class="conversiontdright"><input name="convertam" type="text" id="convertam" value="1.00" class="conversiontext"></td></tr><tr><td class="conversiontdleft">'+textFrom+'</td><td class="conversiontdselect"><select name="convertfr" size="1" id="convertfr" class="conversionselect">'+decodeURIComponent('<option value="EUR" >Euro</option><option value="MAD" >Dirham</option>')+'</select></td></tr><tr><td class="conversiontdleft">'+textTo+'</td><td class="conversiontdselect"><select name="convertto" size="1" id="convertto" class="conversionselect">'+decodeURIComponent(currencies)+'</select></td ></tr><tr><td class="conversiontdleft"><input type="button" name="convert" id="convert" value="'+textConvert+'" class="conversionbutton" onClick="convertthis()"></td><td class="conversiontdright"><div id="convertre" class="conversionresult"></div></td></tr></table>';
+
+				var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-18268170-4']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+
+
+			}
+document.write(exchangeTableau());
+</script>
+{% endblock content %}

@@ -1,0 +1,33 @@
+h2 {
+    background-color: gold;
+    font-family: lft-etica sans-serif;
+    margin-left: 2.6%;
+    }
+p  {
+   margin-left: 2.6%;
+    }
+#swapbox{
+    float: left;
+    width: 54%;
+    height:35.54%;
+    border: 1px solid gold;
+    webkit-border-radius: 10px;
+    border-radius: 10px;
+    }
+#messbox{
+    width: 442px;
+    height: 204px;
+    margin-left:480px;
+    border: 1px solid gold;
+    webkit-border-radius: 10px;
+    border-radius: 10px;
+
+    }
+#mybingabox{
+    width:921px;
+    height:204px;
+    border: 1px solid gold;
+    webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top:40px;
+    }

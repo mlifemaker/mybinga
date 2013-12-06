@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+<form action="" method="post">{% csrf_token %}
+{{ form }}
+</form>
+
+<label>You get:</label>
+{% if envoi %}
+
+<input 	class="input-medium" value="{{ReceivedAmount}} {{To}}">
+<p>Fee: {{fee}} {{From}}</p>
+{% else %}
+<input  class="input-medium" value="">
+
+{% endif %}
+
+</div>
+{% endblock content %}
+
+

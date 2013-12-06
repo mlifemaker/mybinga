@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+        <h1>Se Connecter </h1>
+
+        <form action="{{next}}" method="post">{% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Se connecter">
+
+        </form>
+{{next}}
+</div>
+{% endblock %}

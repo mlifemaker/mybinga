@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Create an account {% endblock %}
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+	<h1>S'inscrire </h1>
+	
+	<form action="#message" method="post">{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Rejoindre">
+
+	</form>
+
+{% if messages %}
+<ul class="messages" id="message">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</div>
+{% endblock %}

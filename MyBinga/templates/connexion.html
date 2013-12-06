@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="content">
+{% if error %}
+<p><strong>Utilisateur inexistant ou mauvais de mot de passe.</strong></p>
+{% endif %}
+
+{% if user.is_authenticated %}
+
+<div class="page-body" style="margin-left:150px;">
+<p>Bonjour {{ user.username }} !</p>
+
+       <div id="swapbox">
+            <h2>Mes swaps</h2>
+            <p>Vos Swaps s'afficheront ici.</p>
+        </div>
+        <div id="messbox">
+            <h2>Mes messages</h2>
+        </div>
+
+        <div id="mybingabox">
+            <h2>My Binga</h2>
+        </div>
+
+</div>
+
+{% else %}
+<h1>Se Connecter</h1>
+<form method="post" action=".">
+       {% csrf_token %}
+       {{ form.as_p }}
+    <input type="submit"/>
+</form>
+{% endif %}
+
+</div>
+{% endblock content %}

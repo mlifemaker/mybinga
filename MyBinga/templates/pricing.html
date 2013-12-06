@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+
+	<h3>Nos tarifs</h3>
+	<p>Après plusieurs itérations, l’équipe MyBinga a développé un Business Model flexible qui lui permet d’être en concordance avec la régulation de change Marocaine en vigueur et de d’offrir à ses clients un prix imbattable sur le marché de change. </p>
+	<p>Notre tarification est simple et transparente :</p>
+	
+	<ul>
+		<li>Les transferts sont effectués avec le taux de change moyen de la date du transfert</li>
+		<li>MyBinga charge une commission :</li>
+		<ul>
+			<li>1% si on arrive à coupler votre transfert avec un autre dans le sens inverse</li>
+			<li>2% si aucun couplage n’est possible pour les transferts vers le Maroc. Ce coût reste très attractif aux alternatives dont le coût de transfert est au moins de 3%</li>
+		</ul>
+	</ul>	
+
+</div>
+
+<div style="text-align:center;">
+	<img src="{{ STATIC_URL }}images/transaction.png"	
+</div>		
+{% endblock %}

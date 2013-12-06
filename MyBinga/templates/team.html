@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block js %}
+
+<link href="{{ STATIC_URL }}css/team.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}css/bootstrap/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/fancybox/jquery.fancybox.css?v=2.1.3">
+<script src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+
+
+{% endblock js %}
+
+{% block content %}
+<div style="margin-left: 40px; margin-right: 40px;">
+
+	<h3>Notre équipe</h3>
+	<ul class="thumbnails">
+
+
+            <li class="span4" style="width: 260px;">
+                <div class="thumbnail" id="b" style="width: 255px; height:455px;">
+		<a class="" href="{{ STATIC_URL }}images/YetribiAbdelaziz.jpg">
+                    <img id="im" src="{{ STATIC_URL }}images/YetribiAbdelaziz.jpg" style="width:100px; height: 135px; " alt="">
+        	</a>
+		<ul id="a">
+	<li>Abdelaziz Yatribi: Co-Fondateur</li>
+		<ul>
+			<li>Expériences en finance et conseil en stratégie et management</li>
+			<li>Réseau dense au sein de des élites Marocaines</li>
+			<li>Formation: &laquo; Ingénieur Civil des Mines &raquo; de l’Ecole des Mines de Nancy et diplômé du &laquo; Masters in Mangement &raquo; de la London Business School</li>
+			<li>Nationalité: Marocaine</li>
+		</ul>
+</ul>
+
+
+                </div>
+        </li>
+	<li class="span4" style="width: 260px;">
+                <div class="thumbnail" id="b" style="width: 255px; height:455px;">
+		<a class=""  href="{{ STATIC_URL }}images/Floris.jpg">
+                    <img class="" src="{{ STATIC_URL }}images/Floris.jpg" style="width:100px; height: 135px;" alt="">
+        	</a>
+	 <ul id="a">
+		<li>Floris Wentholt: Co-Fondateur</li>
+		<ul>
+			<li>Expériences dans l’optimisation linéaire et la simulation numérique</li>
+			<li>Très international : ayant vécu 11 ans en France, 6 ans au Royaume-Uni et 7 ans en Belgique</li>
+			<li>Réseaux en France, Belgique, Royaume-Uni et Pays-Bas</li>
+			<li>Formation : Ingénieur en chimie de l’Université Catholique de Leuven en Belgique et diplômé du &laquo; Masters in Mangement &raquo; de la London Business School </li>
+			<li>Nationalité: Néerlandais-Belge</li>
+		</ul>
+	</ul>
+
+                </div>
+        </li>
+
+	<li class="span4" style="width: 260px;">
+                <div class="thumbnail" id="b" style="width: 255px; height:455px;">
+                <a class="" href="{{ STATIC_URL }}images/default.jpg">
+                    <img class="" src="{{ STATIC_URL }}images/mokhtar.png" style="width:100px; height: 135px; " alt="">
+                </a>
+                <ul id="a">
+
+        	<li>Mokhtar Chemaou: Advisor </li>
+	<ul>
+        <li>Expériences dans le conseil en stratégie et management dans le secteur bancaire</li>
+        <li>Ex-Directeur de l’Organisation au Crédit Agricole</li>
+        <li>Ex-Conseiller au Ministre de l’Industrie M. Chami</li>
+	<li>Formation : &laquo; Ingénieur Civil des Mines &raquo; de l’Ecole des Mines de Nancy spécialité IT</li>
+        <li>Nationalité: Marocaine</li>
+	</ul>
+</ul>
+
+	<li class="span4" style="width: 260px;">
+                <div class="thumbnail" id="b" style="width: 255px; height:455px;">
+                <a class=""  href="{{ STATIC_URL }}images/mohamed2.png">
+		    <img class="" src="{{ STATIC_URL }}images/mohamed2.png" alt="" style="width:100px; height: 135px; ">
+		</a>
+		<ul id="a">
+
+		<li>Mohamed  IBN AL KADI: CTO</li>
+		<ul>
+                	<li>Expériences en Algorithmiques et IT start-ups</li>
+                	<li>Réseau dense dans le monde des start-ups en France</li>
+                	<li>Formation: &laquo; Ingénieur Civil des Mines &raquo; de l’Ecole des Mines de Nancy et Master en Informatique de l’Université Henri Poincaré à Nancy</li>
+        		<li>Nationalité: Marocaine</li>
+		</ul>
+        </ul>
+
+</div>
+        </li>
+
+
+            </ul>
+
+<!-- Nos Conseillers -->
+<!--div>
+<h3>Nos Conseillers</h3>
+        <ul class="thumbnails">
+<li class="span4">
+                <div class="thumbnail" id="b" style="width: 255px; height:475px;">
+                <a class="" href="{{ STATIC_URL }}images/default.jpg">
+                    <img class="" src="{{ STATIC_URL }}images/default.jpg" style="width:100px; height: 135px;" alt="">
+                </a>
+                <ul id="a">
+        <li>Jafar Hilali: Conseiller pour la levée de fonds</li>
+        <ul>
+                <li>Fondateur de Jafar Hilali Ltd, un fond d’investissement pour les pays émergents</li>
+                <li>Ex-Président de Carousel Finance SA, une société de conseil en investissement et de gestion d’actifs basée à Genève</li>
+                <li>Ex-Propriétaire d’un club de foot, le Racing Club de Strasbourg</li>
+                <li>Formation: Diplômé en finance de marché de l’Essec/Paris Nanterre et titulaire d’un Master en économétrie de la Sorbonne </li>
+                <li>Nationalité: Franco-Marocain</li>
+        </ul>
+        </ul>
+
+<li class="span4">
+                <div class="thumbnail" id="b" style="width: 255px; height:475px;">
+                <a class="" href="{{ STATIC_URL }}images/default.jpg">
+                    <img class="" src="{{ STATIC_URL }}images/default.jpg" style="width:100px; height: 135px;" alt="">
+                </a>
+                <ul id="a">
+        <li>Gert Hulstein: Conseiller en IT</li>
+	<ul>
+        	<li>Fondateur d’Inock, entreprise IT basée en France </li>
+		<li>Consultant/Programmeur pour Apple, Olympus et Epson</li>
+        	<li>Formation: Doctorat à l’Université d’Amsterdam, diplômé en informatique d’Utrecht HTS Hilversum</li>
+        	<li>Nationalité: Néerlandais</li>
+	</ul>
+	</ul>
+
+<li class="span4">
+                <div class="thumbnail" id="b" style="width: 255px; height:475px;">
+                <a class="" href="{{ STATIC_URL }}images/default.jpg">
+
+                    <img class="" src="{{ STATIC_URL }}images/default.jpg" style="width:100px; height: 135px;" alt="">
+                </a>
+                <ul id="a">
+        <li>Nico Vandebroek: Conseiller en affaires juridiques</li>
+        <ul>
+                <li>Fondateur du cabinet d’avocats Vandebroek en Belgique</li>
+                <li>Ex-Président du club de foot, Stade Leuven</li>
+                <li>Conseiller en affaires juridiques pour des entreprises financières et companies d’assurances</li>
+                <li>Formation: Master en loi de l’Université Catholique de Leuven</li>
+                <li>Nationalité: Belge</li>
+        </ul>
+</ul>
+
+
+                </div>
+        </li>
+
+
+                </div>
+
+</ul>
+</div-->
+<!-- FIN -->
+</div>
+
+{% endblock %}
